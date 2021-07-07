@@ -1,0 +1,17 @@
+
+******IMPORTANT*****
+
+Lines begining with "#" are commented lines and ignored
+Empty lines and white spaces are all ignored.
+
+One operand functions like "in,inc,dec,.." should be in that shape with these spaces to work or it would cause errors
+
+e.g: "in  R1" or "in R1"    (if it becomes in this shape "in   R1" , it will cause errors due to extra spaces).
+
+
+To Start The Assembler:
+1)Open "Assembler.sln"
+2)Click Start
+3)A Demo for using it is included in a Word file called "Software Assembler.docx"
+
+

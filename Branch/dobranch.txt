@@ -1,0 +1,285 @@
+vsim -gui work.all_microprocessor(processor)
+mem load -i C:/Modeltech_pe_edu_10.4a/examples/Branch.mem /all_microprocessor/inst_memory/ram
+add wave -position insertpoint  \
+sim:/all_microprocessor/Clk \
+sim:/all_microprocessor/Rst \
+sim:/all_microprocessor/interupt \
+sim:/all_microprocessor/inport \
+sim:/all_microprocessor/Z_Flag \
+sim:/all_microprocessor/N_Flag \
+sim:/all_microprocessor/C_Flag \
+sim:/all_microprocessor/registerFile/q0 \
+sim:/all_microprocessor/registerFile/q1 \
+sim:/all_microprocessor/registerFile/q2 \
+sim:/all_microprocessor/registerFile/q3 \
+sim:/all_microprocessor/registerFile/q4 \
+sim:/all_microprocessor/registerFile/q5 \
+sim:/all_microprocessor/registerFile/q6 \
+sim:/all_microprocessor/registerFile/q7 \
+sim:/all_microprocessor/sp_reg_out \
+sim:/all_microprocessor/pc_signal \
+sim:/all_microprocessor/output_bus 
+
+force -freeze sim:/all_microprocessor/Clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/all_microprocessor/Rst 1 0
+force -freeze sim:/all_microprocessor/interupt 0 0
+run
+force -freeze sim:/all_microprocessor/Rst 0 0
+force -freeze sim:/all_microprocessor/inport 32'h00000030 0
+run
+force -freeze sim:/all_microprocessor/inport 32'h00000050 0
+run
+force -freeze sim:/all_microprocessor/inport 32'h00000100 0
+run
+force -freeze sim:/all_microprocessor/inport 32'h00000300 0
+run
+force -freeze sim:/all_microprocessor/inport 32'hFFFFFFFF 0
+run
+run
+run
+run
+run -continue
+run
+run
+force -freeze sim:/all_microprocessor/interupt 1 0
+run
+force -freeze sim:/all_microprocessor/interupt 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/all_microprocessor/inport 32'h00000200 0
+run
+run
+run
+run
+run
+# Loading work.writeback_flip(flip1)
+# Loading work.n_tri_state(tristate1)
+# Loading work.forwardingunit(a_forwardingunit)
+# Loading work.ex_mem_forwarddata(a_ex_mem_forwarddata)
+# Loading work.mem_wb_forwarddata(a_mem_wb_forwarddata)
+# Loading work.hdu(hduarch)
+# ** Warning: Design size of 16337 statements or 315 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Ahmed Hussein  Hostname: DESKTOP-DCG45K1  ProcessID: 18668
+# 
+#           Attempting to use alternate WLF file "./wlft5f330z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft5f330z
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/inst_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/inst_memory
+# ** Note: reset was equal to 1
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: reset was equal to 1
+#    Time: 0 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: reset was equal to 1
+#    Time: 0 ns  Iteration: 2  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftLeft
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftRight
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /all_microprocessor/alu/ShiftRight
+# ** Note: reset was equal to 1
+#    Time: 50 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: reset was equal to 1
+#    Time: 50 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: reset was equal to 1
+#    Time: 100 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: reset was equal to 1
+#    Time: 100 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: y
+#    Time: 1150 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 1150 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: w
+#    Time: 1150 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: y
+#    Time: 1250 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 1250 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: y
+#    Time: 1350 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 1350 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: y
+#    Time: 1450 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 1450 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: u
+#    Time: 1450 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: x
+#    Time: 1550 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: y
+#    Time: 1550 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: w
+#    Time: 1550 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: y
+#    Time: 1650 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: y
+#    Time: 1750 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: y
+#    Time: 1850 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: u
+#    Time: 1850 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+run
+run
+run
+force -freeze sim:/all_microprocessor/interupt 1 0
+run
+# ** Note: y
+#    Time: 4150 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 4150 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: w
+#    Time: 4150 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+force -freeze sim:/all_microprocessor/interupt 0 0
+run
+# ** Note: y
+#    Time: 4250 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 4250 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+run
+# ** Note: y
+#    Time: 4350 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 4350 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+run
+# ** Note: y
+#    Time: 4450 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: z
+#    Time: 4450 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: u
+#    Time: 4450 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+run
+# ** Note: x
+#    Time: 4550 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterA
+# ** Note: y
+#    Time: 4550 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: w
+#    Time: 4550 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+run
+# ** Note: y
+#    Time: 4650 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+run
+# ** Note: y
+#    Time: 4750 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+run
+# ** Note: y
+#    Time: 4850 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+# ** Note: u
+#    Time: 4850 ns  Iteration: 0  Instance: /all_microprocessor/interupt_counter/counterB
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+
+
+
+
+
+
+
+
+
+
+
+
